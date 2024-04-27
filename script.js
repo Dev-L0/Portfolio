@@ -1,24 +1,32 @@
-const skillsBtn = document.querySelector(".skills-btn");
-const toolsBtn = document.querySelector(".tools-btn");
-const pics = document.querySelectorAll(".pics");
+const skills = document.querySelectorAll(".skills");
+const tools = document.querySelectorAll(".tools");
+const skillsToolsToggle = document.querySelector(".skills-tools-toggle");
 
-function showSkills() {
-    skillsBtn.addEventListener("click", function() {
 
-        if(skillsBtn.clicked===true)
-        pics.forEach(pic => {
-            pic.classList.add("show-skills");
-            pic.classList.remove("hide-skills");
-        });
-        console.log("clicked");
 
-         if(toolsBtn.clicked === true){
-            pics.forEach(pic => {
-                pic.classList.add("hide-skills");
-                
-            });
-        }
+
+const inActive = (el) => {
+  el.classList.toggle("hidden");
+};
+
+const aactive = (el) => {
+  el.classList.remove("hidden");
+};
+
+skillsToolsToggle.addEventListener("change", function () {
+  if (skillsToolsToggle.checked) {
+    skills.forEach((skill) => {
+      inActive(skill);
     });
-}
-
-showSkills();
+    tools.forEach((tool) => {
+      aactive(tool);
+    });
+  } else {
+    tools.forEach((tool) => {
+      inActive(tool);
+    });
+    skills.forEach((skill) => {
+      aactive(skill);
+    });
+  }
+});

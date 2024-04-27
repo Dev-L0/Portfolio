@@ -2,30 +2,38 @@
   margin: 0;
   padding: 0;
   font-family: "Gemunu Libre";
-  font-size:18px;
+  font-size: 18px;
   color: rgb(211, 202, 202);
   letter-spacing: 1px;
+
 }
 
 body {
   background-color: #141416;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(211, 202, 202);
 }
 
 .navbar-nav {
-  margin: 20vw;
+  margin: 10vw;
 }
 
 .navbar {
-  background-color: #161516;
+  background-color: #161616;
   font-size: 18px;
   height: 60px;
   position: fixed;
   max-width: inherit;
   width: 100%;
   top: 0%;
+  z-index: 100;
 }
 
-.navbar-nav > .nav-item > .nav-link {
+.navbar-nav>.nav-item>.nav-link {
   font-family: "Gemunu Libre", sans-serif;
   letter-spacing: 3px;
   color: rgb(211, 202, 202);
@@ -35,41 +43,80 @@ body {
   font-size: 35px;
   font-family: "Miltonian Tattoo", serif;
 }
+
 .hero-section {
   color: rgb(211, 202, 202);
 }
+
+.hero-section-figure {
+  margin-left: 70px;
+}
+
+.hero-img {
+  height: 300px;
+  border-radius: 40px;
+  margin-top: 80px;
+  margin-left: 400px;
+}
+
+.about-me {
+  margin-right: 150px;
+  margin-top: 75px;
+}
+
+.about-me-header {
+  margin-left: 180px;
+}
+
 .about-me-para {
+  font-family: "Gemunu Libre", sans-serif;
   line-height: 1.5;
   letter-spacing: 1px;
-  font-family: "Gemunu Libre", sans-serif;
   font-size: 18px;
+  margin-left: 100px;
 }
 
-h3:hover{
-text-decoration: 3px underline rgb(117, 116, 116);
+h3:hover {
+  text-decoration: 3px underline rgb(117, 116, 116);
 }
 
- label{
-  width:150px;
+#skills {
+  margin-top: 5vw;
+}
+
+.skills-fig {
+  background-color: rgb(28, 28, 29);
+  border-radius: 30px;
+  width: 400px;
+}
+
+.tools-fig {
+  background-color: rgb(28, 28, 29);
+  border-radius: 30px;
+  width: 400px;
+}
+
+/* label{
+  width:200px;
   height:50px;
   position:relative;
   display:block;
   background-color: aliceblue;
   border-radius: 200px;
-  box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4),inset 0px -5px 15px rgba(255,255,255,0.4);
+  box-shadow: inset 0px 5px 15px rgba(190, 186, 186, 0.4),inset 0px -5px 15px rgba(255,255,255,0.4);
   cursor:pointer;
   transition:0.3s;
 }
 label:after{
   content:"";
-  width:50px;
+  width:100px;
   height:50px;
   position:absolute;
   top:0px;
   left:2px;
-  background: linear-gradient(180deg, #b99f08,#d1a40e);
+  background: linear-gradient(180deg, #020202,#000000);
   border-radius: 180px;
-  box-shadow: 0px 5px 1-px rgba(0,0,0,0);
+  box-shadow: 0px 5px 1-px rgba(245, 242, 242, 0);
   transition:0.3s;
 }
 input{
@@ -80,7 +127,7 @@ input{
 }
 
 input:checked+ label{
-background-color: #141416;
+background-color: #f5f0f0;
 }
  input:checked + label:after{
   left:90px;
@@ -95,10 +142,114 @@ label span{
   position:absolute;
   font-size:2rem;
   z-index:100;
+} */
+
+.skills-tools {
+  width: 200px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #080808;
+  color: rgb(255, 255, 255);
+  position: relative;
+
 }
-.show-skills{
-  display:inline;
+
+.skills-tools:before {
+  content: "Skills";
+  z-index: 1;
+  position: absolute;
+  top: 3px;
+  left: 30px;
 }
-.hide-skills{
-  display:none;
+
+.skills-tools:after {
+  content: "";
+  width: 100px;
+  height: 30px;
+  background-color: #2f2f31;
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 180px;
+  transition: 0.3s;
+
+
+}
+
+.skills-tools-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+
+.skills-tools-toggle:checked+.skills-tools:after {
+  left: 90px;
+  transform: translateX(10%);
+  content: "Tools";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+}
+
+.active {
+  display: inline;
+}
+
+.hidden {
+  display: none;
+}
+
+#projects {
+  margin-top: 10vw;
+}
+
+.card {
+  width: 800px;
+  height: 600px;
+  background-color: transparent;
+}
+
+.card-img-top {
+  height: 600px;
+}
+
+#contact {
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+}
+
+.contact-me,
+.contact-list li {
+  margin-left: 7.3vw;
+  padding: 0.36vw;
+  list-style: none;
+}
+
+.contact-list i {
+  margin: 0.75vw;
+}
+
+.contact-list p {
+  margin-left: 10vw;
+}
+
+#footer {
+  background-color: #181717;
+  height: 2.1vw;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+
+}
+
+
+/* responsive */
+@media only screen and (min-width: 768px) {
+  .hero-section{
+    max-width: 800px;
+  }
 }
