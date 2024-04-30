@@ -65,7 +65,7 @@ a {
 }
 
 .about-me-header {
-  margin-left: 180px;
+  margin-left: 100px;
 }
 
 .about-me-para {
@@ -88,6 +88,7 @@ h3:hover {
   background-color: rgb(28, 28, 29);
   border-radius: 30px;
   width: 400px;
+  margin-top: 5vw;
 }
 
 .tools-fig {
@@ -248,8 +249,50 @@ label span{
 
 
 /* responsive */
-@media only screen and (min-width: 768px) {
-  .hero-section{
-    max-width: 800px;
+@media (max-width: 1200px) {
+ 
+  .hero{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
   }
+  .about-me{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me-para{
+    width:100%;
+  }
+  
 }
+
+@media (max-width: 800px) {
+  .skills-section{
+    width:100%;
+  }
+
+  .skill{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:700px;
+    margin:0px;
+    font-size:3vw;
+  }
+ 
+ 
+  .card {
+    width: 600px;
+    height: 500px;
+    background-color: transparent;
+    margin:0px;
+  }
+  
+  .card-img-top {
+    height: 500px;
+  }
+
+  }
+ 
