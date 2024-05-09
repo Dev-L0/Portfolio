@@ -1,16 +1,18 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Gemunu Libre";
   font-size: 18px;
   color: rgb(211, 202, 202);
   letter-spacing: 1px;
 
+  scroll-behavior: smooth;
 }
 
-body {
+body,html {
   background-color: #141416;
-  height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -23,7 +25,7 @@ a {
 }
 
 .navbar {
-  background-color: #161616;
+  background-color: rgba(58, 58, 58, 0.9);
   font-size: 18px;
   height: 60px;
   position: fixed;
@@ -44,110 +46,128 @@ a {
   font-family: "Miltonian Tattoo", serif;
 }
 
-.hero-section {
-  color: rgb(211, 202, 202);
+.theme-toggle-inp{
+  width:0;
+  height:0;
+  visibility:hidden;
+}
+.theme-toggle{
+  width:50px;
+  height:20px;
+  position:relative;
+  display:block;
+  background-color: rgb(60, 78, 97);
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(190, 186, 186, 0.4),inset 0px -5px 15px rgba(255,255,255,0.4);
+  cursor:pointer;
+  transition:0.3s;
+}
+.theme-toggle:after{
+  content:"";
+  width:20px;
+  height:20px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background: linear-gradient(180deg, #000000,#000000);
+  border-radius: 180px;
+  box-shadow: 0px 5px 1-px rgba(245, 242, 242, 0);
+  transition:0.3s; 
 }
 
-.hero-section-figure {
-  margin-left: 70px;
+.theme-toggle-inp:checked+ .heme-toggle{
+background-color: #f5f0f0;
+} 
+.theme-toggle-inp:checked + .theme-toggle:after{
+  left:30px;
+  /* transform:translateX(10%); */
+  background: linear-gradient(180deg,#f3e303,#fffb01);
+  }
+
+
+.hero-section {
+   color: rgb(211, 202, 202);
+   /* background-color: pink;  */
 }
+
+.hero{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
 
 .hero-img {
-  height: 300px;
+  min-height: 200px;
+  max-width:450px;
   border-radius: 40px;
-  margin-top: 80px;
-  margin-left: 400px;
-}
+  margin-top: 180px;
+ 
+} 
 
 .about-me {
-  margin-right: 150px;
-  margin-top: 75px;
+  min-height:200px;
+  min-width:100%; 
 }
 
 .about-me-header {
   margin-left: 100px;
+  margin-top:70px;
 }
 
 .about-me-para {
-  font-family: "Gemunu Libre", sans-serif;
+  max-width:750px;
+  min-height: 300px;
   line-height: 1.5;
   letter-spacing: 1px;
   font-size: 18px;
-  margin-left: 100px;
 }
 
+h3{
+  color:rgb(156, 153, 153);
+}
 h3:hover {
   text-decoration: 3px underline rgb(117, 116, 116);
 }
 
-#skills {
-  margin-top: 5vw;
+#skills-section {
+  margin:100px 80px 0px 20px;
+  max-width:100%;
 }
+.skill{
+  display:flex;
+  justify-content: space-around;
+  min-width:700px;
+}
+.skill-div{
+  padding:5px;
+  max-width:300px;
 
+  
+}
 .skills-fig {
   background-color: rgb(28, 28, 29);
   border-radius: 30px;
-  width: 400px;
-  margin-top: 5vw;
+  max-width: 300px;
+  min-height: 250px;
+  margin: 10px 0px 50px 100px;
+  padding:5px 10px 5px 10px;
 }
-
+.skill-para{
+  min-width:400px;
+}
 .tools-fig {
   background-color: rgb(28, 28, 29);
   border-radius: 30px;
   width: 400px;
 }
 
-/* label{
-  width:200px;
-  height:50px;
-  position:relative;
-  display:block;
-  background-color: aliceblue;
-  border-radius: 200px;
-  box-shadow: inset 0px 5px 15px rgba(190, 186, 186, 0.4),inset 0px -5px 15px rgba(255,255,255,0.4);
-  cursor:pointer;
-  transition:0.3s;
-}
-label:after{
-  content:"";
-  width:100px;
-  height:50px;
-  position:absolute;
-  top:0px;
-  left:2px;
-  background: linear-gradient(180deg, #020202,#000000);
-  border-radius: 180px;
-  box-shadow: 0px 5px 1-px rgba(245, 242, 242, 0);
-  transition:0.3s;
-}
-input{
-  width:0;
-  height:0;
-  visibility:hidden;
- 
-}
 
-input:checked+ label{
-background-color: #f5f0f0;
-}
- input:checked + label:after{
-  left:90px;
-  transform:translateX(10%);
-  background: linear-gradient(180deg,#000000,#7c7b7b);
-  }
-
-  label:active:after{
-    width:70px;
-  }
-label span{
-  position:absolute;
-  font-size:2rem;
-  z-index:100;
-} */
 
 .skills-tools {
-  width: 200px;
-  height: 30px;
+  min-width: 200px;
+  min-height: 30px;
   border-radius: 50px;
   background-color: #080808;
   color: rgb(255, 255, 255);
@@ -205,26 +225,30 @@ label span{
 }
 
 #projects {
-  margin-top: 10vw;
+  margin:100px;
 }
 
 .card {
-  width: 800px;
-  height: 600px;
+  margin:20px;
+  max-width: 800px;
+  max-height: 600px;
   background-color: transparent;
 }
 
 .card-img-top {
-  height: 600px;
+  padding:5px;
+  min-height: 300px;
+  min-width:200px;
 }
 
 #contact {
-  margin-top: 10vw;
-  margin-bottom: 10vw;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .contact-me,
 .contact-list li {
+ 
   margin-left: 7.3vw;
   padding: 0.36vw;
   list-style: none;
@@ -236,63 +260,100 @@ label span{
 
 .contact-list p {
   margin-left: 10vw;
+  font-size:12px;
 }
 
 #footer {
   background-color: #181717;
-  height: 2.1vw;
+  min-height: 20px;
   width: 100%;
   bottom: 0;
   position: relative;
 
 }
-
-
-/* responsive */
-@media (max-width: 1200px) {
+#footer>p {
+  font-size: 12px;
+  color: white;
+  text-align: center;
  
+}
+
+
+/* /* /* responsive * / */
+@media (max-width: 1200px) {
+  *{
+    margin-right:0px;
+
+  }
   .hero{
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size:30px;
   }
-  .about-me{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .about-me-para{
-    width:100%;
-  }
+
+.about-me{
+  min-width:500px;
+  padding:2px;
+}
+ .about-me-para{
+  min-width:300px;
+  margin:20px 160px 20px 160px; 
+
+ }
+ .about-me-header {
+  margin-left: 160px;
+  
+}
   
 }
 
-@media (max-width: 800px) {
-  .skills-section{
-    width:100%;
+@media(max-width:850px){
+  
+  *{
+    font-size:16px;
   }
-
+  .hero-img{
+    max-width:400px;
+  }
+ 
+  #skills-section{
+    min-width:200px;
+  }
   .skill{
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width:700px;
-    margin:0px;
-    font-size:3vw;
-  }
- 
- 
-  .card {
-    width: 600px;
-    height: 500px;
-    background-color: transparent;
-    margin:0px;
-  }
-  
-  .card-img-top {
-    height: 500px;
+    justify-content: center;
+    min-width:300px;
   }
 
+  .skills-fig{
+    display: flex;
+    flex-wrap: wrap;
+    min-width:250px;
+    margin:50px 150px 50px 200px;
+    justify-content: center;
+    align-items: center;
   }
  
+}
+
+@media(max-width:430px){
+  body{
+    overflow-x:hidden;
+  }
+  
+  .hero-img{
+    max-width:300px;
+  }
+ 
+.skill-para{
+  min-width: 30px;
+  min-height: 100px;
+  /* background-color: indianred; */
+}
+ .skills-fig{
+  margin-left:200px;
+  min-width:200px;
+ }
+}

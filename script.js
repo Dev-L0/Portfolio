@@ -9,7 +9,7 @@ const inActive = (el) => {
   el.classList.toggle("hidden");
 };
 
-const aactive = (el) => {
+const active = (el) => {
   el.classList.remove("hidden");
 };
 
@@ -19,14 +19,14 @@ skillsToolsToggle.addEventListener("change", function () {
       inActive(skill);
     });
     tools.forEach((tool) => {
-      aactive(tool);
+      active(tool);
     });
   } else {
     tools.forEach((tool) => {
       inActive(tool);
     });
     skills.forEach((skill) => {
-      aactive(skill);
+      active(skill);
     });
   }
 });
