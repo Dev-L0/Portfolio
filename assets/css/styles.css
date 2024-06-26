@@ -388,6 +388,10 @@ h3:hover {
   min-height: 100px;
   
 }
+.theme-toggle-inp{
+  margin
+}
+
  .skills-fig{
   margin-left:200px;
   min-width:200px;
@@ -395,4 +399,5 @@ h3:hover {
  .hide-p{
   display:none;
  }
+
 }
