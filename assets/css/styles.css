@@ -4,20 +4,39 @@
   box-sizing: border-box;
   font-family: "Gemunu Libre";
   font-size: 18px;
-  color: rgb(211, 202, 202);
+  /* color: rgb(211, 202, 202); */
   letter-spacing: 1px;
-
   scroll-behavior: smooth;
 }
 
+
+
 body,html {
-  background-color: #141416;
+  /* background-color: #141416; */
   overflow-x: hidden;
+}
+
+.dark{
+  background-color: #141416;
+  color: rgb(211, 202, 202);
+}
+
+.light{
+  background-color:rgb(167, 170, 172);
+  color: rgb(22, 22, 22);
 }
 
 a {
   text-decoration: none;
   color: rgb(211, 202, 202);
+}
+
+.btn{
+  border: 1px solid rgb(88, 58, 58);
+  color:rgb(88, 85, 85);
+}
+.btn:hover{
+  background-color:rgb(88, 58, 58);
 }
 
 .navbar-nav {
@@ -46,6 +65,11 @@ a {
   font-family: "Miltonian Tattoo", serif;
 }
 
+
+.sun, .moon{
+  font-size:16px;
+  color: yellow;
+}
 .theme-toggle-inp{
   width:0;
   height:0;
@@ -55,10 +79,11 @@ a {
   width:50px;
   height:20px;
   position:relative;
-  display:block;
-  background-color: rgb(60, 78, 97);
+  display:flex;
+  justify-content: space-between;
+  background-color: rgb(3, 3, 3);
   border-radius: 200px;
-  box-shadow: inset 0px 5px 15px rgba(190, 186, 186, 0.4),inset 0px -5px 15px rgba(255,255,255,0.4);
+  /* box-shadow: inset 0px 5px 15px rgba(190, 186, 186, 0.4),inset 0px -5px 15px rgba(255,255,255,0.4); */
   cursor:pointer;
   transition:0.3s;
 }
@@ -69,26 +94,25 @@ a {
   position:absolute;
   top:0px;
   left:0px;
-  background: linear-gradient(180deg, #000000,#000000);
+  background: linear-gradient(180deg, #ffffff,#ffffff);
   border-radius: 180px;
-  box-shadow: 0px 5px 1-px rgba(245, 242, 242, 0);
+  /* box-shadow: 0px 5px 1-px rgba(245, 242, 242, 0); */
   transition:0.3s; 
 }
 
-.theme-toggle-inp:checked+ .heme-toggle{
-background-color: #f5f0f0;
+.theme-toggle-inp:checked+ .theme-toggle{
+background-color: #969494;
 } 
+
 .theme-toggle-inp:checked + .theme-toggle:after{
   left:30px;
-  /* transform:translateX(10%); */
-  background: linear-gradient(180deg,#f3e303,#fffb01);
+  background: #ffffff;;
   }
 
 
-.hero-section {
+/* .hero-section {
    color: rgb(211, 202, 202);
-   /* background-color: pink;  */
-}
+} */
 
 .hero{
   display:flex;
@@ -124,9 +148,9 @@ background-color: #f5f0f0;
   font-size: 18px;
 }
 
-h3{
+/* h3{
   color:rgb(156, 153, 153);
-}
+} */
 h3:hover {
   text-decoration: 3px underline rgb(117, 116, 116);
 }
@@ -264,7 +288,7 @@ h3:hover {
 }
 
 #footer {
-  background-color: #181717;
+  background-color: rgba(58, 58, 58, 0.9);
   min-height: 20px;
   width: 100%;
   bottom: 0;
@@ -306,6 +330,18 @@ h3:hover {
   
 }
   
+}
+
+@media(max-width:990px){
+.navbar-collapse{
+ 
+  display:flex;
+  background-color: rgba(46, 45, 45, 0.9);
+  transition: 1s ease-in-out;
+}
+.navbar-collapse ul>li{
+  font-size: 28px;
+}
 }
 
 @media(max-width:850px){
@@ -350,7 +386,7 @@ h3:hover {
 .skill-para{
   min-width: 30px;
   min-height: 100px;
-  /* background-color: indianred; */
+  
 }
  .skills-fig{
   margin-left:200px;
