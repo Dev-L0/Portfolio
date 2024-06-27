@@ -24,9 +24,10 @@
   --base-color-neutral--white: var(--base-color-brand--white);
   --background-color--background-secondary: var(--base-color-neutral--white);
   --base-color-brand--black: #000000;
+  --link-color--link-primary: var(--base-color-brand--dark-purple);
   /* --base-color-brand--dark-purple: #43218c;
   --text-color--text-secondary: var(--base-color-brand--gray-text-white-bg);
-  --link-color--link-primary: var(--base-color-brand--dark-purple);
+  
   --base-color-brand--lightest-purple: #ddd2f4;
   --background-color--background-tertiary: var(--base-color-brand--bg-purple);
   --background-color--background-error: var(--base-color-system--error-red);
@@ -72,7 +73,7 @@ body,html {
 }
 
 .dark{
-  background-image: radial-gradient(
+  background: radial-gradient(
     farthest-corner at 40px 40px,
     rgb(17, 6, 41) 0%,
     rgb(0, 0, 0) 100%
@@ -81,8 +82,12 @@ body,html {
 }
 
 .light{
-  background-color:rgb(216, 210, 231);
-  color: rgb(14, 1, 39);
+  background: radial-gradient(
+    farthest-corner at 40px 40px,
+     rgb(184, 181, 189) 0%,
+      rgb(132, 92, 224) 100%
+  );
+  color:rgb(59, 6, 59);
 }
 
 a {
@@ -214,8 +219,8 @@ background-color: #969494;
   font-size: 18px;
 }
 
-h3{
-color: rgb(71, 14, 145);
+h3, h5{
+color: rgb(84, 8, 184);
 }
 h3:hover {
   text-decoration: 1px underline rgb(48, 2, 109);
@@ -329,6 +334,10 @@ h3:hover {
   background-color: transparent;
 }
 
+.card-text{
+  color: rgb(211, 202, 202);
+}
+
 .card-img-top {
   padding:5px;
   min-height: 300px;
@@ -367,7 +376,7 @@ h3:hover {
 }
 #footer>p {
   font-size: 12px;
-  color: white;
+  color: rgb(211, 202, 202);
   text-align: center;
  
 }

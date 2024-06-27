@@ -4,8 +4,8 @@ const skillsToolsToggle = document.querySelector(".skills-tools-toggle");
 const toggleTheme = document.querySelector(".theme-toggle-inp");
 const logo =  document.querySelector(".logo");
 const h3 = document.querySelectorAll("h3");
-const darkTheme = document.getElementsByClassName("dark");
-const lightTheme = document.getElementsByClassName("light");
+const dark = document.getElementsByClassName("dark");
+const light = document.getElementsByClassName("light");
 
 
 const inActive = (el) => {
@@ -39,15 +39,25 @@ toggleTheme.addEventListener("change", function switchTheme(){
   
 if(toggleTheme.checked === true){
  document.body.classList.add('light');
- window.localStorage.setItem("theme", "lightTheme");
+ window.localStorage.setItem("theme", "light");
 }
  else{
   document.body.classList.remove('light');
-  window.localStorage.setItem("theme", "darkTheme");
-  console.log(localStorage);
+  window.localStorage.setItem("theme", "dark");
+  
  }
   
 })
+
+
+const storedTheme = window.localStorage.getItem('theme');
+if(storedTheme === 'light'){
+  toggleTheme.checked = true;
+  document.body.classList.add('light');
+} else {
+  toggleTheme.checked = false;
+  document.body.classList.add('dark');
+}
 
 
 
