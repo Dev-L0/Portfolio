@@ -71,13 +71,13 @@ body,html {
 }
 
 .dark{
-  background-color: var(--background-color--background-primary);
+  background-color: rgb(28, 28, 29);
   color: var(--base-color-brand--text-p);
 }
 
 .light{
-  background-color:rgb(167, 170, 172);
-  color: rgb(22, 22, 22);
+  background-color:rgb(216, 210, 231);
+  color: rgb(14, 1, 39);
 }
 
 a {
@@ -401,7 +401,7 @@ h3:hover {
 .navbar-collapse{
  
   display:flex;
-  background-color: var(--background-color--background-primary);
+  background-color: rgba(25, 15, 48, 0.5);
   transition: 1s ease-in-out;
 }
 .navbar-collapse ul>li{
