@@ -332,6 +332,7 @@ h3:hover {
   max-width: 800px;
   max-height: 600px;
   background-color: transparent;
+  border: none;
 }
 
 .card-text{
@@ -341,7 +342,7 @@ h3:hover {
 .card-img-top {
   padding:5px;
   min-height: 300px;
-  min-width:200px;
+  min-width:300px;
 }
 
 #contact {
