@@ -25,43 +25,8 @@
   --background-color--background-secondary: var(--base-color-neutral--white);
   --base-color-brand--black: #000000;
   --link-color--link-primary: var(--base-color-brand--dark-purple);
-  /* --base-color-brand--dark-purple: #43218c;
-  --text-color--text-secondary: var(--base-color-brand--gray-text-white-bg);
-  
-  --base-color-brand--lightest-purple: #ddd2f4;
-  --background-color--background-tertiary: var(--base-color-brand--bg-purple);
-  --background-color--background-error: var(--base-color-system--error-red);
-  --text-color--text-error: var(--base-color-system--error-red-dark);
-  --base-color-brand--main-purple: #6f41d2;
-  --base-color-brand--white: white;
-  --border-color--border-alternate: var(--base-color-neutral--neutral-darker);*/
   --base-color-neutral--black: var(--base-color-brand--black); 
-  /* --base-color-brand--main-blue: #428eef;
-  --base-color-brand--main-red: #ed4647;
-  --base-color-brand--main-green: #3ccb97;
-  --base-color-brand--main-yellow: #d4af37;
-  --background-color--background-warning: var(--base-color-system--warning-yellow);
-  --text-color--text-warning: var(--base-color-system--warning-yellow-dark);
-  --base-color-brand--bg-purple: #f6f3fc;
-  --base-color-brand--light-yellow: #dfc865;
-  --base-color-brand--light-red: #f78182;
-  --base-color-neutral--neutral-lightest: #eee;
-  --base-color-neutral--neutral: #6b7280;
-  --border-color--border-secondary: var(--base-color-brand--dark-purple);
-  --link-color--link-secondary: var(--base-color-neutral--black);
-  --link-color--link-alternate: var(--base-color-neutral--white); */
-  /* --base-color-neutral--neutral-lighter: #ccc;
-  --base-color-neutral--neutral-light: #aaa;
-  --base-color-neutral--neutral-dark: #444;
-  --base-color-neutral--neutral-darker: #222;
-  --base-color-neutral--neutral-darkest: #111;
-  --base-color-system--success-green: #cef5ca;
-  --base-color-system--success-green-dark: #114e0b;
-  --base-color-system--warning-yellow: #fcf8d8;
-  --base-color-system--warning-yellow-dark: #5e5515;
-  --base-color-system--error-red: #f8e4e4;
-  --base-color-system--error-red-dark: #3b0b0b;
-  --base-color-system--focus-state: #2d62ff; */
+  
 
 }
 
