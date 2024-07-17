@@ -216,6 +216,7 @@ h3:hover {
   margin: 10px 0px 50px 100px;
   padding:5px 10px 5px 10px;
 }
+
 .skill-para{
   min-width:400px;
 }
@@ -279,6 +280,7 @@ h3:hover {
   position: absolute;
 
 }
+
 
 .active {
   display: inline;

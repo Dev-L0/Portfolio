@@ -1,3 +1,4 @@
+
 const skills = document.querySelectorAll(".skills");
 const tools = document.querySelectorAll(".tools");
 const skillsToolsToggle = document.querySelector(".skills-tools-toggle");
@@ -6,6 +7,17 @@ const logo =  document.querySelector(".logo");
 const h3 = document.querySelectorAll("h3");
 const dark = document.getElementsByClassName("dark");
 const light = document.getElementsByClassName("light");
+const Heroimg = document.getElementsByClassName(".heroimg");
+
+
+gsap.from("Heroimg", {rotation: -360, x: -100, duration: 1});
+
+// Tooltip
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
 
 
 const inActive = (el) => {
@@ -34,6 +46,7 @@ skillsToolsToggle.addEventListener("change", function () {
   }
 });
 
+// Theme
 
 toggleTheme.addEventListener("change", function switchTheme(){
   
@@ -60,6 +73,7 @@ if(storedTheme === 'light'){
 }
 
 
+// Effect on Logo
 
 document.addEventListener('DOMContentLoaded', (event) => {
   let arr = [];
